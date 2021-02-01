@@ -12,4 +12,3 @@ sns.heatmap(correlation_matrix, ax=ax, cmap='YlGnBu', linewidth=0.1)
 plt.suptitle('Correlation matrix')
 plt.savefig('Boston_dataset_correlation_heatmap.png')
 plt.show()
-

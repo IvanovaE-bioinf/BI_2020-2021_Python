@@ -17,4 +17,3 @@ plt.grid()
 plt.legend()
 plt.savefig('Line_plots.png')
 plt.show()
-
