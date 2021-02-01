@@ -1,4 +1,5 @@
-# Dataset Boston from MASS package (R), Housing values in suburbs of Boston
+# Dataset Boston from MASS package (R)
+# Housing values in suburbs of Boston
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
@@ -11,11 +12,4 @@ sns.heatmap(correlation_matrix, ax=ax, cmap='YlGnBu', linewidth=0.1)
 plt.suptitle('Correlation matrix')
 plt.savefig('Boston_dataset_correlation_heatmap.png')
 plt.show()
-
-
-
-
-
-
-
 
