@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
-from PIL import Image, ImageFilter, ImageEnhance
+from PIL import Image, ImageFilter
 import numpy as np
 
 
+path = 'PyPict.jpg'
 fig, ax = plt.subplots(nrows=2, ncols=3)
-img = plt.imread('PyPict.jpg')
+img = plt.imread(path)
 
 img_1 = img.copy()
 img_1[:, :, 0] = 0
@@ -14,7 +15,7 @@ img_2 = img.copy()
 img_2[:, :, 2] = 0
 ax[0, 1].imshow(img_2)
 
-img_3 = Image.open('PyPict.jpg').convert('L')
+img_3 = Image.open(path).convert('L')
 ax[0, 2].imshow(np.array(img_3))
 
 im = img.copy()
@@ -37,17 +38,17 @@ def bright(source_name, brightness):
             red_color = int(r * brightness)
             red_color = min(255, max(0, red_color))
 
-            green = int(g * brightness)
-            green = min(255, max(0, green))
+            green_color = int(g * brightness)
+            green_color = min(255, max(0, green_color))
 
-            blue = int(b * brightness)
-            blue = min(255, max(0, blue))
+            blue_color = int(b * brightness)
+            blue_color = min(255, max(0, blue_color))
 
-            result.putpixel((x, y), (red_color, green, blue))
+            result.putpixel((x, y), (red_color, green_color, blue_color))
     return result
 
 
-img_6 = bright('PyPict.jpg', 2)
+img_6 = bright(path, 2)
 ax[1, 2].imshow(img_6)
 plt.savefig('My_pic.png')
 plt.show()
