@@ -45,8 +45,10 @@ class NucleicAcid:
         return hash(self.seq.upper() + self.seq_type)
 
     def __eq__(self, other):
-        if self.seq_type == other.seq_type and self.seq.upper() == other.seq.upper():
-            return True
+    	a = self.seq.upper()
+    	b = other.seq.upper()
+    	if self.seq_type == other.seq_type and a == b:
+        	return True
         else:
             return False
 
