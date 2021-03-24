@@ -30,4 +30,5 @@ def time_analyzer(min_quant, max_quant, step):
     plt.xlabel('Quantity of numbers')
     plt.ylabel('Time')
     plt.legend()
+    plt.savefig('Numpy_vs_random')
     plt.show()
