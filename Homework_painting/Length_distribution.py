@@ -19,6 +19,3 @@ def length_distribution(path_to_fastq):
         plt.grid()
         plt.savefig('Sequence_length.png')
         plt.show()
-
-
-length_distribution(path)
