@@ -26,7 +26,8 @@ def time_analyzer(min_quant, max_quant, step):
     plt.plot(xs, time_list_1, color='green', label='numpy')
     plt.plot(xs, time_list_2, color='red', label='random')
     plt.grid()
-    plt.title('Duration of the process depending on module and quantity of numbers.')
+    plt.title('Duration of the process depending'
+              ' on module and quantity of numbers.')
     plt.xlabel('Quantity of numbers')
     plt.ylabel('Time')
     plt.legend()

@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 
 # треугольник серпинского
 def sierpinski_triangle(number_of_points, side_length):
-    center_point_x_y = np.random.randint(10, size=2)  # координаты середины треугольника
+    # координаты середины треугольника:
+    center_point_x_y = np.random.randint(10, size=2)
     p1_x = center_point_x_y[0]  # координата верхней вершины
     p2_x = center_point_x_y[0] - np.sin(np.pi / 6) * side_length
     p3_x = center_point_x_y[0] + np.sin(np.pi / 6) * side_length
@@ -39,7 +40,8 @@ def sierpinski_triangle(number_of_points, side_length):
 
 # коврик серпинского
 def sierpinski_carpet(number_of_points, side_length):
-    p0 = np.random.randint(10, size=2)  # координаты нижнего левого угла
+    # координаты нижнего левого угла:
+    p0 = np.random.randint(10, size=2)
     px = [p0[0],
           p0[0],
           p0[0],

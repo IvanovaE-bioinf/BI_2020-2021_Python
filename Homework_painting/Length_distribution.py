@@ -1,11 +1,13 @@
 import matplotlib.pyplot as plt
+
+
 plt.rcParams['savefig.bbox'] = 'tight'
 plt.figure(figsize=(10, 8))
 path = input('Enter path to fastq file: ')
 
 
-def length_distribution(x):
-    with open(x, 'r') as f:
+def length_distribution(path_to_fastq):
+    with open(path_to_fastq, 'r') as f:
         lines = f.readlines()
         lens = []
         for i in range(1, len(lines), 4):

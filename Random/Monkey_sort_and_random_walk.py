@@ -20,11 +20,11 @@ def list_generator(min_size=8, max_size=10, step=1):
 
 # проверка отсортирован ли список
 def sort_check(my_list):
-    flag = True
+    list_sorted = True
     for i in range(len(my_list) - 1):
         if my_list[i] > my_list[i + 1]:
-            flag = False
-    return flag
+            return False
+    return list_sorted
 
 
 # сортировка, возвращает время выполнения
@@ -37,7 +37,8 @@ def monkey_sort(my_list):
 
 
 # зависимость среднего времени выполнения от количества элементов
-def monkey_visualization(min_list_size=8, max_list_size=11, step=1, replics=3):
+def monkey_visualization(min_list_size=8, max_list_size=11,
+                         step=1, replics=3):
     lst, xs = list_generator(min_list_size, max_list_size, step)
     mean_list = []
     sd_list = []
@@ -49,7 +50,8 @@ def monkey_visualization(min_list_size=8, max_list_size=11, step=1, replics=3):
         sd_list.append(np.std(repl_list))
     _, ax = plt.subplots()
     ax.bar(xs, mean_list, color='green', align='center', alpha=0.5)
-    ax.errorbar(xs, mean_list, sd_list, color='#297083', ls='none', lw=2, capthick=2)
+    ax.errorbar(xs, mean_list, sd_list, color='#297083',
+                ls='none', lw=2, capthick=2)
     ax.set_title('Distribution of time for monkey sort.')
     ax.set_xlabel('Number of elements')
     ax.set_ylabel('Time')
