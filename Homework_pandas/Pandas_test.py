@@ -24,4 +24,3 @@ train_part = train_matches.filter(items=['pos',
                                          'deletions',
                                          'insertions'])
 train_part.to_csv("train_part.csv", index=False)
-
