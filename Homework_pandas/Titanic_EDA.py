@@ -40,7 +40,7 @@ titanic['Pclass'].value_counts().plot.bar(ax=axes[0, 2],
 titanic['SibSp'].value_counts().plot.bar(ax=axes[0, 3],
                                          color='xkcd:aqua',
                                          rot=360, grid=True,
-                                         title='Passengers with sib. and parents')
+                                         title='Pass. with sib. and parents')
 titanic['Parch'].value_counts().plot.bar(ax=axes[1, 0],
                                          color='xkcd:aqua',
                                          rot=360, grid=True,
