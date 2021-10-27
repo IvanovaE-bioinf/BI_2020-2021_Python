@@ -37,10 +37,10 @@ titanic['Pclass'].value_counts().plot.bar(ax=axes[0, 2],
                                           color='xkcd:aqua',
                                           rot=360, grid=True,
                                           title='Passenger class')
-titanic['SibSp'].value_counts().plot.\
-    bar(ax=axes[0, 3], color='xkcd:aqua',
-    rot=360, grid=True,
-    title='Passengers with siblings and parents')
+titanic['SibSp'].value_counts().plot.bar(ax=axes[0, 3],
+                                         color='xkcd:aqua',
+                                         rot=360, grid=True,
+                                         title='Passengers with sib. and parents')
 titanic['Parch'].value_counts().plot.bar(ax=axes[1, 0],
                                          color='xkcd:aqua',
                                          rot=360, grid=True,
@@ -85,10 +85,9 @@ plt.suptitle('Correlation matrix')
 plt.savefig('Heatmap.png')
 plt.show()
 plt.close()
-'''A weak correlation between Pclass/Fare - obviously 3rd class is cheaper;
-between Pclass/Survived - passengers of the 3rd class mostly died;
-between Pclass/Age - older people have money for the 1st class;
-between Age/SibSp - the older the passenger the less relatives on board;
-between SibSp/Parch - parents+siblings==parents+children.
-It seems that gender and class were the most important factors for survival.
-'''
+# A weak correlation between Pclass/Fare - obviously 3rd class is cheaper;
+# between Pclass/Survived - passengers of the 3rd class mostly died;
+# between Pclass/Age - older people have money for the 1st class;
+# between Age/SibSp - the older the passenger the less relatives on board;
+# between SibSp/Parch - parents+siblings==parents+children.
+# Seems that gender and class were the most important factors for survival.
