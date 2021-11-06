@@ -10,8 +10,7 @@ class TestDnaRna(unittest.TestCase):
 
     def test_reverse_compliment(self):
         self.assertEqual((self.dna.reverse_compliment(),
-                          self.rna.reverse_compliment()),
-                          ('NCAGT', 'NCAGU'))
+                          self.rna.reverse_compliment()), ('NCAGT', 'NCAGU'))
         with self.assertRaises(TypeError):
             self.acid.reverse_compliment()
 
